@@ -7,7 +7,7 @@ type Config struct {
 	// Number of cache shards, value must be a power of two
 	Shards int
 	// Time after which entry can be evicted
-	// No eviction if -1
+	// No eviction if LifeWindow < 0
 	LifeWindow time.Duration
 	// Interval between removing expired entries (clean up).
 	// If set to <= 0 then no action is performed. Setting to < 1 second is counterproductive — bigcache has a one second resolution.
